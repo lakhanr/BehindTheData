@@ -1,3 +1,13 @@
 <p>
   list-courses works!
 </p>
+<p>
+If you find that a particular word or two appear in the output, but are not of value to your particular analysis.
+You can remove them, specifically, from the text.
+docs <- tm_map(docs, removeWords, c("department", "email"))
+  #<strong> Just replace "department" and "email" with words that you would like to remove.</strong>
+Removing common word endings (e.g., “ing”, “es”, “s”)
+This is referred to as “stemming” documents. We stem the documents so that a word will be recognizable to the
+computer, despite whether or not it may have a variety of possible endings in the original text.
+library(SnowballC)
+docs <- tm_map(docs, stemDocument)</p>
